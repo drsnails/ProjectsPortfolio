@@ -63,7 +63,7 @@ body {
     -webkit-tap-highlight-color: #fea136;
 }
 .offcanvas-btn {
-    z-index: 100000;
+    z-index: 998;
     position: fixed;
     bottom: 8%;
     right: 3%;
@@ -805,6 +805,7 @@ button {
     color: #367cfe;
     padding: 2px;
     border-radius: 5px;
+    margin-bottom: 15px;
     background-color: #9ec0ff6b;
 }
 
@@ -815,5 +816,13 @@ button {
 }
 
 .modal-content {
-    background-color: rgba(242, 249, 250, 0.96)
+    background-color: rgba(242, 249, 250, 0.96);
+    z-index: 999;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }

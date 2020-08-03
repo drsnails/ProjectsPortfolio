@@ -1,7 +1,6 @@
 
 
 function initPage() {
-    console.log('init Working');
     renderProjects()
 }
 
@@ -35,7 +34,7 @@ function renderProjects() {
 
 function onOpenModal(projId) {
     var proj = getProjById(projId) 
-    // console.log(proj);
+    
     $('#portfolioModal1 h2').text(proj.title)
     $('#portfolioModal1 .modal-desc').text(proj.desc)
     $('.date-li').text(`Time created: ${proj.publishedAt}`)
@@ -60,3 +59,4 @@ function makeUrlEmail(emailTxt, subjectTxt, msgTxt){
     var linkStr = `https://mail.google.com/mail/?view=cm&fs=1&to=anistu@gmail.com&su=${subjectTxt}&body=${msgTxt}   ${emailTxt}`
     return linkStr
 }
+

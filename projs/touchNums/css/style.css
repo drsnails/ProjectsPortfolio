@@ -1,0 +1,168 @@
+body {
+  text-align: center;
+  background-color: rgb(238, 231, 206);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(68, 63, 95);
+}
+
+h1 {
+  font-size: 34px;
+  opacity: 90%;
+  font-family: sans-serif;
+  width: 340px;
+  background-color: rgb(101, 205, 247);
+  color: tomato;
+  border: solid;
+  border-width: 1px;
+  border-color: tomato;
+  border-radius: 2px;
+  margin: 10px auto;
+}
+
+.log-screen {
+  transition: 0.1s;
+  
+  font-weight: bold;
+  margin: 0 auto;
+  font-size: 16px;
+  width: 200px;
+  height: 20px;
+  padding: 1%;
+  background-color: rgb(240, 129, 109);
+  color: rgb(51, 96, 218);
+  border: solid;
+  border-width: 1.6px;
+  border-color: lightblue;
+  border-radius: 10px;
+  top: 65px;
+  right: 610px;
+}
+
+.win-msg {
+  position: absolute;
+  font-weight: bold;
+  font-size: 20px;
+  width: 440px;
+  height: 0px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: rgb(240, 129, 109);
+  color: rgb(51, 96, 218);
+  border: solid;
+  border-width: 1.6px;
+  border-color: lightblue;
+  border-radius: 10px;
+  top: 55px;
+  right: 500px;
+  display: none;
+  z-index: 4;
+}
+
+.restart-btn {
+  background-color: rgb(101, 205, 247);
+  color: tomato;
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  opacity: 50%;
+  top: 140px;
+  right: 466px;
+  display: none;
+  font-size: 70px;
+  z-index: 2;
+  border: solid salmon
+  rgb(51, 96, 218)
+  
+}
+
+img {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 1450px;
+  height: 770px;
+  opacity: 35%;
+  z-index: -2;
+}
+
+button {
+  outline: none;
+  color: rgb(36, 105, 114);
+  font-weight: bolder;
+  font-size: 15px;
+  width: 110px;
+  height: 40px;
+  border: solid;
+  border-width: 1.6px;
+  background-color: rgb(253, 246, 209);
+  border-color: rgb(140, 191, 238);
+  margin: auto 29px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.difficulty-buttons {
+  margin: 20px auto;
+  
+}
+
+.edit-container {
+  margin: 0 auto;
+  margin-top: 0;
+  /* position: relative; */
+  /* bottom: 20px; */
+  /* margin: 0 auto; */
+}
+
+
+
+button:hover {
+  border-color: rgb(49, 154, 252);
+  cursor: pointer;
+}
+
+.easy-btn {
+  background-color: rgb(155, 200, 243);
+}
+
+table {
+   
+  table-layout: fixed;
+  width: 65vh;
+  height: 65vh;
+  margin: 20px auto;
+}
+
+
+td {
+  background-color: rgb(107, 172, 233);
+  font-size: 30px;
+  color: rgb(135, 16, 190);
+  
+}
+
+td:hover {
+  cursor: pointer;
+}
+
+.restart-btn:hover {
+  opacity: 80%;
+  border-color: tomato
+}
+
+/* .new-game-btn:active {
+  border-style: inset;
+} */
+
+/* .time-box {
+  position: absolute;
+  border-radius: 20px;
+  padding: 10px;
+  opacity: 90%;
+  background-color: rgb(25, 25, 199);
+  color: rgb(238, 245, 132);
+  width: 100px;
+  height: 50px;
+  left: 100px;
+} */

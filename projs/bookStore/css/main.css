@@ -1,0 +1,314 @@
+body {
+    background-color: rgb(43, 65, 105);
+    text-align: center;
+    color: rgb(236, 231, 221);
+    display: flex;
+    font-family: 'Barlow', sans-serif;
+    
+    
+}
+
+.main-container {
+    background-color: rgb(43, 65, 105);
+    position: relative;
+    width: 90%;
+    height: 95vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.greet-add {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+}
+
+.create-book {
+    margin: 10px auto;
+    display: inline-block;
+    background-color: rgba(23, 157, 197, 0.438);
+    padding: 7px;
+    border-radius: 8px;
+    transition: 0.23s;
+    color: rgb(195, 195, 231);
+}
+
+.add-book {
+    background-color: rgba(15, 19, 27, 0.699);
+    padding: 8px;
+    width: 60vw;
+    max-width: 300px;
+    min-width: 200px;
+    border-radius: 5px;
+    margin: 8px auto 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-txt, .price-txt {
+    width: 40%;
+    border-radius: 2px;
+    margin: 0 4px;
+}
+
+.add-btn {
+    box-sizing: border-box;
+    margin: 0 4px;
+}
+
+.book-container {
+    position: relative;
+    margin: 0;
+    color: rgb(98, 230, 230);
+    width: 85%;
+    
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border-radius: 7px;
+    
+    background-color: rgb(34, 74, 148);
+    border: 1px solid rgb(151, 180, 235);
+    border-collapse: collapse;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* height: 100%; */
+    justify-items: flex-end;
+    flex-grow: 1;
+}
+
+tr {
+    box-sizing: border-box;
+    max-height: 50px;
+    display: flex;
+    justify-self: flex-end;
+    width: 100%;
+    
+    box-shadow: 0px 0px 3px;
+
+}
+
+th {
+    box-sizing: border-box;
+    font-weight: bolder;
+    background-color: rgb(35, 90, 190);
+    color: rgb(250, 241, 206);
+    width: calc(14.28571% + 0px);
+    flex-grow: 1;
+    transition: 0.23s;
+}
+
+.title-head {
+    width: 21.39%
+}
+
+.title-head, .price-head, .rate-head {
+    cursor: pointer;
+}
+
+.actions-head {
+    width: 35.7142857%;
+    box-sizing: border-box;
+}
+
+/* 43242342342343*/
+
+td {
+    font-size: 18px;
+    padding: 10px 0px;
+    flex-grow: 1;
+    width: 14.28571%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td.book-name {
+    width: 21.42857%;
+}
+
+td.actions {
+    width: 11.86%;
+}
+
+td button {
+    min-width: 51px;
+    margin: 0;
+}
+
+.update {
+    background-color: rgba(15, 19, 27, 0.699);
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.set-update-btn, .price-txt-update {
+    box-sizing: border-box;
+    margin: 0 20px;
+}
+
+.modal {
+    position: absolute;
+    color: rgb(35, 60, 143);
+    justify-content: space-between;
+    display: flex;
+    min-height: 92vh;
+    background-color: rgb(109, 125, 219);
+    margin: 0 4%;
+    box-sizing: border-box;
+    align-self: center;
+    top: 4%;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal p {
+    color: rgb(180, 208, 235);
+    font-size: 1.1em;
+}
+
+.modal button {
+    width: 130px;
+    margin: 10px;
+}
+
+h4 {
+    font-size: 40px;
+    margin: 0;
+}
+
+span img {
+    width: 200px;
+    height: 250px;
+    margin: 4px 0;
+}
+
+.rate {
+    width: 99.2px;
+    margin: 8px auto 0 auto;
+    background-color: rgb(201, 201, 243);
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rate img {
+    width: 25.1px;
+}
+
+
+.page-container img {
+    cursor: pointer;
+}
+
+
+.plus {
+    flex-basis: 26px;
+}
+
+.rate-value {
+    margin: 0x 0px;
+    font-size: 17px;
+    align-self: center;
+}
+
+button {
+    background-color: rgb(214, 170, 134);
+    color: rgb(80, 20, 20);
+    box-sizing: border-box;
+    max-height: 20px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none;
+    transition: 0.23s;
+}
+
+input {
+    background-color: rgb(225, 225, 248);
+    color: darkblue;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+.page-container {
+    position: absolute;
+    display: flex;
+    bottom: 0%;
+    box-sizing: border-box;
+}
+
+.page-values {
+    display: flex;
+}
+
+.page-container img {
+    width: 2vw;
+    margin: 0 9px;
+}
+
+.page {
+    background-color: rgb(50, 165, 173);
+    color: rgb(255, 244, 144);
+    font-weight: bold;
+    font-size: 19px;
+    margin: 0 0.5px;
+    width: 2vw;
+    cursor: pointer;
+    border-radius: 1px;
+    
+}
+
+.current-page {
+    background-color: rgb(124, 202, 207);
+}
+
+.hidden {
+    display: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(245, 193, 151);
+    color: rgb(131, 2, 2);
+}
+
+.create-book:hover {
+    opacity: 0.9;
+}
+
+.create-book:hover {
+    cursor: pointer;
+    background-color: rgba(71, 199, 238, 0.438)
+}
+
+.plus, .minus:hover {
+    cursor: pointer;
+}
+
+.title-head:hover, .price-head:hover, .rate-head:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(63, 113, 206);
+}
+

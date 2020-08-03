@@ -6,7 +6,7 @@ p {
     line-height: 1.75;
 }
 a {
-    color: #fed136;
+    color: #feae36;
 }
 a.active,
 a:active,
@@ -60,7 +60,7 @@ img::-moz-selection {
     background: transparent;
 }
 body {
-    -webkit-tap-highlight-color: #fed136;
+    -webkit-tap-highlight-color: #fea136;
 }
 .offcanvas-btn {
     z-index: 100000;
@@ -69,7 +69,7 @@ body {
     right: 3%;
     height: 50px;
     width: 50px;
-    background: #e2cb36;
+    background: #e29236;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -84,7 +84,7 @@ body {
 .offcanvas-aside {
     position: fixed;
     height: 100%;
-    background: red;
+    background: rgb(255, 153, 0);
     width: 80vw;
     right: -80vw;
     z-index: 10;
@@ -129,19 +129,19 @@ body {
     text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: #fed136;
+    background-color: #7c36fe;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
 #mainNav .navbar-brand {
-    color: #fed136;
+    color: #fc9724;
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 #mainNav .navbar-brand.active,
 #mainNav .navbar-brand:active,
 #mainNav .navbar-brand:focus,
 #mainNav .navbar-brand:hover {
-    color: #fec503;
+    color: #367cfe;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 90%;
@@ -154,7 +154,7 @@ body {
 }
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fed136;
+    color: #fea136;
 }
 @media (min-width: 992px) {
     
@@ -246,7 +246,9 @@ header.masthead .intro-text .intro-heading {
 
 #portfolio .portfolio-item {
     right: 0;
-    margin: 0 0 15px;
+    margin: 15px 0 15px;
+    
+    
 }
 #portfolio .portfolio-item .portfolio-link {
     position: relative;
@@ -285,8 +287,14 @@ header.masthead .intro-text .intro-heading {
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
     margin: 0;
 }
+
+.portfolio-link {
+    width: 120px;
+    height: 120px;
+}
 #portfolio .portfolio-item .portfolio-caption {
     max-width: 400px;
+    height: 50%;
     margin: 0 auto;
     padding: 25px;
     text-align: center;
@@ -690,7 +698,7 @@ fieldset[disabled] .btn-primary:hover {
     background-color: #fed136;
 }
 .btn-primary .badge {
-    color: #fed136;
+    color: #fea136;
     background-color: white;
 }
 .btn-xl {
@@ -699,21 +707,21 @@ fieldset[disabled] .btn-primary:hover {
     padding: 20px 40px;
     border-radius: 3px;
     color: white;
-    border-color: #fed136;
-    background-color: #fed136;
+    border-color: #fea136;
+    background-color: #fea136;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
 .btn-xl.focus,
 .btn-xl:focus {
     color: white;
-    border-color: #b48b01;
-    background-color: #fec503;
+    border-color: #fea136b9;
+    background-color: #fea136;
 }
 .btn-xl:hover {
     color: white;
-    border-color: #f6bf01;
-    background-color: #fec503;
+    border-color: #fea136;
+    background-color: #fea136;
 }
 .btn-xl.active,
 .btn-xl:active,
@@ -733,7 +741,7 @@ fieldset[disabled] .btn-primary:hover {
 .open > .btn-xl.dropdown-toggle:hover {
     color: white;
     border-color: #b48b01;
-    background-color: #dcab01;
+    background-color: #fea136;
 }
 .btn-xl.active,
 .btn-xl:active,
@@ -766,4 +774,36 @@ fieldset[disabled] .btn-xl:hover {
 .container {
     padding-right: 0;
     padding-left: 0;
+}
+
+img .me {
+    opacity: 10%;
+}
+
+label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #367cfe;
+}
+
+.btn-primary:hover {
+    background-color: #739eee;
+}
+
+button {
+    cursor: pointer;
+}
+
+.img-proj {
+    max-width: 120px;
+    max-height: 120px;
+}
+
+.proj-link {
+    color: #367cfe;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #9ec0ff6b;
 }

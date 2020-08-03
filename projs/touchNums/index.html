@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>touch-nums</title>
+</head>
+
+<body onload="init()">
+  <img src="img/3671917.jpg" alt="">
+  <h1>Touch the numbers!</h1>
+  <div class="log-screen">Click number 1 to start..</div>
+  <div class="win-msg">You won! <br>Your time is 36</div>
+  <button class="restart-btn" onclick="init()">Restart</button>
+  <table border="1">
+
+  </table>
+  <div class="edit-container">
+    <div class="difficulty-buttons">
+      <button class="easy-btn" onclick="setDifficulty(this)">Easy (16)</button>
+      <button class="medium-btn" onclick="setDifficulty(this)">Medium (25)</button>
+      <button class="hard-btn" onclick="setDifficulty(this)">Hard (36)</button>
+    </div>
+
+
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

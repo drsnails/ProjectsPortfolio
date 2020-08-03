@@ -40,8 +40,9 @@ function onOpenModal(projId) {
     $('#portfolioModal1 .modal-desc').text(proj.desc)
     $('.date-li').text(`Time created: ${proj.publishedAt}`)
     $('.proj-link').attr("href", `${proj.url}`);
-
+    $('.img-modal').attr("src", `img/portfolio/${proj.name}.png`);
 }
+
 
 function onSubmit() {
     var emailTxt = $('.email-txt').val()

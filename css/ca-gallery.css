@@ -807,3 +807,13 @@ button {
     border-radius: 5px;
     background-color: #9ec0ff6b;
 }
+
+.img-modal {
+    max-width: 400px;
+    max-height: 400px;
+    
+}
+
+.modal-content {
+    background-color: rgba(242, 249, 250, 0.96)
+}

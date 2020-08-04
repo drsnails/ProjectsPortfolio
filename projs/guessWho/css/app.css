@@ -1,0 +1,43 @@
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  background-color: #73AEDB;
+  position: relative;
+  text-align: center;
+  color:#fcf064;
+  font-size: 3em;
+
+}
+
+footer {
+  background-color:  black;
+  text-align: center;
+  color:lightblue;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.victory-msg {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.clear-memory {
+
+  position: absolute;
+  right: 1%;
+  top: 0%;
+  margin-bottom: 0px;
+}

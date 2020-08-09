@@ -5,74 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
-<body onload="onInit()">
+<body onload="onInit()" class="bg-dark">
     <header>
     </header>
-    <div class="main-container">
+    <div class="main-container bg-dark">
         <section class="greet-add">
-            <h1>Welcome to my book shop!</h1>
-            <span class="create-book" onclick="onToggleAddBookForm()">create a new book</span>
+            <h1 data-trans="title">Welcome to my book shop!</h1>
+            <span data-trans="create-book" class="create-book" onclick="onToggleAddBookForm()">create a new book</span>
             <section class="add-book hidden">
-                <input type="text" class="name-txt" placeholder="Enter Name" />
-                <input type="number" class="price-txt" placeholder="Enter Price" />
-                <button class="add-btn" onclick="onAddBook()">Add</button>
+                <input data-trans="add-name-placeholder" type="text" class="name-txt add-input" placeholder="Enter Name" />
+                <input data-trans="add-price-placeholder" type="number" class="price-txt add-input" placeholder="Enter Price" />
+                <button data-trans="add" class="add-btn" onclick="onAddBook()">Add</button>
             </section>
         </section>
-        <table class="book-container" border="1px">
+        <select onchange="onSetLang(this.value)" class="selectpicker langs">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+        </select>
+
+        <table class="book-container table " border="1">
             <tbody class="books-body">
                 <tr>
                     <th>id</th>
-                    <th>title</th>
-                    <th>price</th>
+                    <th data-trans="table-title">title</th>
+                    <th data-trans="table-price">price</th>
                     <th class="actions-head" colspan="3">actions</th>
                 </tr>
             </tbody>
 
-            <div class="modal hidden">
-                <h4></h4>
-                <span class="img-container">
-                    <img class="img-book" src="/img/the master and margarita.png" alt="">
-                </span>
-                rate
-                <div class="rate">
-                    <img class="minus" onclick="onMinusRate()"
-                        src="https://img.icons8.com/ultraviolet/40/000000/minus.png" />
-                    <span class="rate-value"></span>
-                    <img class="plus" onclick="onPlusRate()"
-                        src="https://img.icons8.com/ultraviolet/40/000000/plus.png" />
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore esse libero illo beatae
-                    natus, cum quo sed corporis, quis unde vero sunt nisi est fugiat quidem modi quas fuga.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium odio nulla quo esse
-                    consectetur quia fugiat nihil natus impedit error possimus labore deleniti illo dignissimos, dolores
-                    vel repellat eum ipsum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas cumque earum
-                    dolores id blanditiis corrupti sequi optio alias consectetur neque ut dolore quo amet cupiditate,
-                    voluptate nostrum modi placeat eaque!Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Deserunt eum qui pariatur enim dicta nobis ad quae molestias sint nisi debitis quaerat labore
-                    numquam ea iure, praesentium facilis! Beatae, ipsam?Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Rerum, debitis qui aliquid perferendis aliquam sed vel voluptatibus fuga
-                    repellendus optio voluptate iusto accusantium recusandae fugit omnis unde illum error mollitia.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur vero libero illum optio
-                    sapiente temporibus asperiores provident eum quod recusandae numquam voluptatem, cupiditate a
-                    tenetur, repellat voluptatum. Illum, reiciendis molestias.
-                </p>
-                <button onclick="onToggleModal()">Close</button>
-            </div>
         </table>
+        
+        <div class="modal modal-dialog  hidden">
+            <h4></h4>
+            <span class="img-container">
+                <img class="img-book" src="/img/the master and margarita.png" alt="">
+            </span>
+            <span data-trans="table-rate">
+                rate
+            </span>
+            <div class="rate">
+                <img class="minus" onclick="onMinusRate()"
+                    src="https://img.icons8.com/ultraviolet/40/000000/minus.png" />
+                <span class="rate-value"></span>
+                <img class="plus" onclick="onPlusRate()" src="https://img.icons8.com/ultraviolet/40/000000/plus.png" />
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore esse libero illo beatae
+                natus, cum quo sed corporis, quis unde vero sunt nisi est fugiat quidem modi quas fuga.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium odio nulla quo esse
+                consectetur quia fugiat nihil natus impedit error possimus labore deleniti illo dignissimos.
+            </p>
+            <button data-trans="close" onclick="onToggleModal()">Close</button>
+        </div>
         <div class="footer">
             <div class="page-container">
-                <img onclick="onPrevPage()" src="https://img.icons8.com/flat_round/64/000000/back--v1.png" />
+                <img class="change-pg" onclick="onPrevPage()" src="https://img.icons8.com/flat_round/64/000000/back--v1.png" />
                 <div class="page-values">
                     <div class="page page1">1</div>
                     <div class="page page2">2</div>
                     <div class="page page3">3</div>
                 </div>
-                <img onclick="onNextPage()"
+                <img class="change-pg" onclick="onNextPage()"
                     src="https://img.icons8.com/flat_round/64/000000/circled-chevron-right.png" />
 
             </div>
@@ -80,9 +88,21 @@
         </div>
     </div>
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
 
     <script src="js/util-service.js"></script>
     <script src="js/storage-service.js"></script>
+    <script src="js/i18n-service.js"></script>
     <script src="js/book-service.js"></script>
     <script src="js/book-controller.js"></script>
 

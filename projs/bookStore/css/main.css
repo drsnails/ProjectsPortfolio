@@ -5,7 +5,15 @@ body {
     display: flex;
     font-family: 'Barlow', sans-serif;
     
-    
+}
+
+/* body.rtl {
+    direction: rtl;
+} */
+
+.rtl {
+    /* text-align: right; */
+    direction: rtl;
 }
 
 .main-container {
@@ -25,10 +33,15 @@ h1 {
 }
 
 .greet-add {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: column;
     justify-self: flex-start;
+}
+
+.greet-add h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 5px;
 }
 
 .create-book {
@@ -44,13 +57,13 @@ h1 {
 .add-book {
     background-color: rgba(15, 19, 27, 0.699);
     padding: 8px;
-    width: 60vw;
-    max-width: 300px;
-    min-width: 200px;
+    width: 70vw;
+    width: 350px;
+    max-height: 60px;
     border-radius: 5px;
     margin: 8px auto 0px auto;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-evenly; */
 }
 
 .name-txt, .price-txt {
@@ -59,24 +72,31 @@ h1 {
     margin: 0 4px;
 }
 
+.add-input {
+    float: left;
+}
+
 .add-btn {
     box-sizing: border-box;
-    margin: 0 4px;
+    float: right;
+    
+    
 }
 
 .book-container {
     position: relative;
     margin: 0;
-    color: rgb(98, 230, 230);
-    width: 85%;
-    
+    opacity: 100%;
+    color: rgb(250, 241, 206);
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-self: center;
     border-radius: 7px;
     
-    background-color: rgb(34, 74, 148);
-    border: 1px solid rgb(151, 180, 235);
+    background-color: rgba(34, 74, 148, 0.377);
+    border: 1px solid rgba(151, 181, 235, 0.473);
     border-collapse: collapse;
 }
 
@@ -95,15 +115,14 @@ tr {
     display: flex;
     justify-self: flex-end;
     width: 100%;
-    
-    box-shadow: 0px 0px 3px;
+    box-shadow: inset 0px 0px 3px 0px;
 
 }
 
 th {
     box-sizing: border-box;
     font-weight: bolder;
-    background-color: rgb(35, 90, 190);
+    background-color: rgba(35, 89, 190, 0.596);
     color: rgb(250, 241, 206);
     width: calc(14.28571% + 0px);
     flex-grow: 1;
@@ -119,7 +138,7 @@ th {
 }
 
 .actions-head {
-    width: 35.7142857%;
+    width: 35.714285%;
     box-sizing: border-box;
 }
 
@@ -141,7 +160,7 @@ td.book-name {
 }
 
 td.actions {
-    width: 11.86%;
+    width: 11.9%;
 }
 
 td button {
@@ -163,15 +182,17 @@ td button {
 
 .modal {
     position: absolute;
-    color: rgb(35, 60, 143);
-    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    justify-content: space-evenly;
     display: flex;
-    min-height: 92vh;
-    background-color: rgb(109, 125, 219);
-    margin: 0 4%;
+    
+    
+    background-color: rgb(79, 82, 105);
+    margin: 0 auto;
     box-sizing: border-box;
+    opacity: 95%;
     align-self: center;
-    top: 4%;
+    top: 0%;
     flex-direction: column;
     align-items: center;
     z-index: 1;
@@ -180,11 +201,15 @@ td button {
 .modal p {
     color: rgb(180, 208, 235);
     font-size: 1.1em;
+    max-height: 200px;
+    overflow: hidden;
+    margin: 50px 0;
 }
 
 .modal button {
-    width: 130px;
-    margin: 10px;
+    /* width: 130px;
+    margin: 10px; */
+
 }
 
 h4 {
@@ -201,7 +226,7 @@ span img {
 .rate {
     width: 99.2px;
     margin: 8px auto 0 auto;
-    background-color: rgb(201, 201, 243);
+    background-color: rgb(72, 72, 83);
     border-radius: 100px;
     display: flex;
     justify-content: space-between;
@@ -228,13 +253,14 @@ span img {
 }
 
 button {
-    background-color: rgb(214, 170, 134);
-    color: rgb(80, 20, 20);
-    box-sizing: border-box;
-    max-height: 20px;
-    border: 1px solid transparent;
+    background-color: rgba(23, 157, 197, 0.651);
+    color: rgb(214, 214, 231);
+    /* box-sizing: border-box; */
+    max-height: 30px;
+    border: 1px solid black;
     border-radius: 3px;
     outline: none;
+    
     transition: 0.23s;
 }
 
@@ -269,8 +295,8 @@ input {
 }
 
 .page {
-    background-color: rgb(50, 165, 173);
-    color: rgb(255, 244, 144);
+    background-color: rgb(138, 175, 175);
+    color: rgb(245, 244, 241);
     font-weight: bold;
     font-size: 19px;
     margin: 0 0.5px;
@@ -280,8 +306,15 @@ input {
     
 }
 
+.change-pg {
+    opacity: 80%;
+    
+}
+
+
+
 .current-page {
-    background-color: rgb(124, 202, 207);
+    background-color: rgb(97, 196, 196);
 }
 
 .hidden {
@@ -290,8 +323,8 @@ input {
 
 button:hover {
     cursor: pointer;
-    background-color: rgb(245, 193, 151);
-    color: rgb(131, 2, 2);
+    background-color: rgba(71, 199, 238, 0.637)
+    
 }
 
 .create-book:hover {
@@ -300,11 +333,20 @@ button:hover {
 
 .create-book:hover {
     cursor: pointer;
-    background-color: rgba(71, 199, 238, 0.438)
+    background-color: rgba(71, 199, 238, 0.575)
 }
+
+.plus, .minus {
+    opacity: 60%;
+}
+
+/* tr {
+    border-radius: 10px;
+} */
 
 .plus, .minus:hover {
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .title-head:hover, .price-head:hover, .rate-head:hover {
@@ -312,3 +354,15 @@ button:hover {
     background-color: rgb(63, 113, 206);
 }
 
+.langs {
+    box-sizing: border-box;
+    /* width: 20%; */
+    align-self: flex-start;
+    
+    background-color: rgb(204, 183, 161);
+    border-radius: 6px;
+}
+
+select {
+    margin: 10px 0;
+}
